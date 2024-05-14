@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Booking Automation</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gym Booking Automation</h1>
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.email.label }}<br />
+          {{ form.email(size=32, class_='form-control') }}
+        </div>
+        <div class="form-group">
+          {{ form.password.label }}<br />
+          {{ form.password(size=32, class_='form-control') }}
+        </div>
+        <div class="form-group">
+          {{ form.booking_time.label }}<br />
+          {{ form.booking_time(size=32, class_='form-control') }}
+        </div>
+        <div class="form-group">
+          {{ form.system_open_date.label }}<br />
+          {{ form.system_open_date(size=32, class_='form-control') }}
+        </div>
+        <div class="form-group">
+          {{ form.submit(class_='btn btn-primary') }}
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
